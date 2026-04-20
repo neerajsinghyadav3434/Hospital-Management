@@ -12,7 +12,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -54,7 +53,6 @@ public class Appointment {
     private Doctor doctor;
 
     @NotNull(message = "Appointment date and time is required")
-    @FutureOrPresent(message = "Appointment date and time must be present or future")
     @Column(name = "appointment_date", nullable = false)
     private LocalDateTime appointmentDate;
 
