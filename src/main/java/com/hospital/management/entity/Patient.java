@@ -39,6 +39,7 @@ public class Patient {
     @Column(nullable = false)
     private String name;
 
+    @NotNull(message = "Age is required")
     @Min(value = 0, message = "Age cannot be negative")
     @Max(value = 130, message = "Age seems invalid")
     @Column(nullable = false)
